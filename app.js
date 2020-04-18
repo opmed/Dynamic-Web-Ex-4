@@ -83,7 +83,10 @@ const postRoute = require("./routes/post.js")
 const createRoute = require("./routes/createArticle.js")
 
 //create base route
-app.get("/", (req, res) => res.send("DynamicWeb4"));
+//app.get("/", (req, res) => res.send("DynamicWeb4"));
+app.use('/', indexRoute);
+app.use('/post', postRoute);
+app.use('/create', createRoute);
 
 
 //set jason array as response
